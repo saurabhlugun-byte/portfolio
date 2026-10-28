@@ -19,7 +19,7 @@ or dates. Keep answers to a few sentences unless asked for depth.
 - Personal Finance Analyzer (PFA): an LLM-powered tool built on the Claude API that parses bank
   statements into spending insights. He owns product strategy, prompt and eval design for messy
   real-world financial data, a freemium go-to-market, and a build-in-public content loop.
-  Stack: Next.js, Supabase, Vercel. In active development.
+  Stack: Next.js, Supabase, Vercel. Live now at rupeescope.com; a few minor refinements still in progress.
 - Jalsa: a pass-the-phone party mobile app; being packaged for the Play Store and App Store via Capacitor.
 - Self-directed AI depth through shipping: LLM foundations, RAG vs. fine-tuning vs. SLM tradeoffs,
   and agent frameworks (LangChain, LlamaIndex, CrewAI, n8n).

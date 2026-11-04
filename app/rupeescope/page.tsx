@@ -23,7 +23,7 @@ const NUMBERS: { label: string; value: string | null; note?: string }[] = [
 ];
 
 // Set to true only if the held-out set was actually run (shows the paragraph).
-const HELD_OUT_SET_RUN = false;
+const HELD_OUT_SET_RUN = true;
 
 // Images: drop files at these paths under public/ and they appear on next build.
 // The Screenshots section stays hidden until at least one exists.
@@ -93,13 +93,14 @@ export default function RupeeScopeCaseStudy() {
       <section className="block">
         <h2>The problem</h2>
         <p>
-          Indian bank statements arrive as password-protected PDFs, and no two
-          banks lay them out the same way. Columns shift, rows wrap, and
-          descriptions are dense UPI strings that hide who was actually paid.
-          Money moving between your own accounts looks like spending in one
-          statement and income in another. Add it all up naively and the totals
-          are wrong &mdash; and a finance tool with wrong totals is worse than no
-          tool at all.
+          Bank statements look simple until you try to read them
+          programmatically. Layouts vary by bank and account type, UPI strings
+          rarely say who you paid, and naive totals double-count card bills and
+          treat investments as spending. RupeeScope uses an LLM where rules fail,
+          for reading layouts and interpreting transactions, and keeps it away
+          from where it fails, arithmetic. Every imported statement must pass a
+          balance checksum, every LLM call is costed, and every change is
+          measured against hand-labelled real statements.
         </p>
       </section>
 
@@ -126,7 +127,7 @@ export default function RupeeScopeCaseStudy() {
       </section>
 
       <section className="block">
-        <h2>Five decisions, and what each cost</h2>
+        <h2>Seven decisions, and what each cost</h2>
 
         <h3>1. The LLM transcribes and interprets, but never computes</h3>
         <p>
@@ -180,14 +181,32 @@ export default function RupeeScopeCaseStudy() {
 
         <h3>5. A model per task, escalating only on checksum failure</h3>
         <p>
-          Each step uses the cheapest model that does the job. When an import fails
-          the checksum, structuring is retried with a stronger model, from Sonnet
-          to Opus.
+          Each step uses the cheapest model that does the job: Sonnet for
+          structuring and text-to-SQL, Haiku for classification. When an import
+          fails the checksum, structuring is retried with Opus.
         </p>
         <p className="tradeoff">
           <strong>Tradeoff:</strong> more routing logic, and failing statements cost
           more and take longer. But the expensive model only runs when there&rsquo;s
           objective evidence it&rsquo;s needed.
+        </p>
+
+        <h3>6. Statements are never stored</h3>
+        <p>
+          Statements are never stored; only rows persist, deletable in one click.
+        </p>
+        <p className="tradeoff">
+          <strong>Tradeoff:</strong> there is no original file to go back to, so
+          re-processing a statement means uploading it again.
+        </p>
+
+        <h3>7. Unknown is an acceptable answer</h3>
+        <p>
+          Unknown is an acceptable answer; a confident wrong category isn&rsquo;t.
+        </p>
+        <p className="tradeoff">
+          <strong>Tradeoff:</strong> some rows are left for the user to categorise,
+          in exchange for categories they can trust.
         </p>
       </section>
 
@@ -212,8 +231,8 @@ export default function RupeeScopeCaseStudy() {
         </p>
         {HELD_OUT_SET_RUN && (
           <p>
-            <strong>An overfitting check.</strong> A held-out set that was never
-            tuned on, run only at milestones.
+            <strong>An overfitting check.</strong> A held-out set of 2 real
+            statements that were never used while tuning the parser or prompts.
           </p>
         )}
         <p>
@@ -319,7 +338,7 @@ export default function RupeeScopeCaseStudy() {
       <section className="block">
         <h2>What I did</h2>
         <p>
-          I took an idea from a crowded category to a live beta in about{" "}
+          I took an idea from a crowded category to a closed beta in about{" "}
           {DEV_WEEKS} weeks, solo. I narrowed scope hard, built a test harness
           before the parser, and designed around the LLM&rsquo;s weaknesses instead
           of trusting it. I made a long series of small domain calls: UPI P2P,

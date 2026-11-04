@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AskWidget from "@/components/AskWidget";
+import Experience from "@/components/Experience";
 
 const IMPACT = [
   { value: "70% → 94%", context: "Order fulfilment, omni-channel POS–OMS platform · Emami Frank Ross" },
@@ -91,44 +92,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Selected work */}
+      {/* Experience */}
       <section className="block">
-        <h2>Selected work</h2>
-        <div className="items">
-          <article className="item">
-            <div className="item-head">
-              <h3>Cash Management System — KFin × Axis MF</h3>
-              <span className="tag">0-to-1 · 2025–26</span>
-            </div>
-            <p>
-              Initiated a platform to serve AMCs and PMS across India. Ran
-              requirements discovery directly with the client&rsquo;s leadership,
-              prototyped in Figma AI, and kicked off the build before handoff.
-            </p>
-          </article>
-          <article className="item">
-            <div className="item-head">
-              <h3>ML document-extraction + RPA — KFin</h3>
-              <span className="tag">FinTech automation</span>
-            </div>
-            <p>
-              Implemented ML-powered cheque data entry and RPA for banking
-              processes, automating reconciliation and credit identification
-              across multiple bank accounts.
-            </p>
-          </article>
-          <article className="item">
-            <div className="item-head">
-              <h3>Omni-channel commerce — Emami Frank Ross</h3>
-              <span className="tag">Scale · 1100+ pincodes</span>
-            </div>
-            <p>
-              Built a dark-store fulfilment model and a POS-to-OMS platform that
-              lifted order fulfilment from 70% to 94%, plus payment-mode
-              integrations that raised AOV 35%.
-            </p>
-          </article>
-        </div>
+        <h2>Experience</h2>
+        <Experience />
       </section>
 
       {/* POV */}

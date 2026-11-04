@@ -252,6 +252,48 @@ h3 {
 
 .impact-context { color: var(--muted); font-size: 14px; line-height: 1.45; }
 
+/* Experience timeline */
+.lens { display: flex; gap: 8px; margin: -8px 0 26px; flex-wrap: wrap; }
+.chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.timeline { list-style: none; margin: 0; padding: 0; }
+
+.tl-entry {
+  position: relative;
+  padding: 0 0 28px 26px;
+  border-left: 1px solid var(--hair);
+  margin-left: 5px;
+}
+.tl-entry:last-child { padding-bottom: 0; border-left-color: transparent; }
+
+.tl-entry::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 6px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--paper);
+}
+.tl-entry.edu::before { background: var(--paper); border: 2px solid var(--muted); }
+
+.tl-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2px 14px;
+  color: var(--muted);
+  font-size: 15px;
+  margin: 2px 0 8px;
+}
+.tl-dates { font-size: 14px; white-space: nowrap; }
+
+.tl-entry ul { margin: 0; padding-left: 18px; max-width: 62ch; }
+.tl-entry ul li { margin-bottom: 6px; font-size: 16px; }
+.tl-entry strong { font-weight: 600; }
+
 /* Card subtitle */
 .subtitle {
   display: block;

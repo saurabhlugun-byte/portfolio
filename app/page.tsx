@@ -2,6 +2,21 @@ import Link from "next/link";
 import AskWidget from "@/components/AskWidget";
 import Experience from "@/components/Experience";
 
+const SKILLS = [
+  {
+    group: "AI / LLM",
+    items: ["LLM application design", "Prompt engineering", "LLM evals", "Structured outputs", "Model selection & cost tradeoffs", "Text-to-SQL", "Claude API", "Claude Code"],
+  },
+  {
+    group: "Product",
+    items: ["0-to-1 products", "Roadmaps", "Discovery & requirements", "Agile / Scrum", "GTM"],
+  },
+  {
+    group: "Stack",
+    items: ["SQL", "Python", "Next.js", "Supabase / PostgreSQL", "Vercel"],
+  },
+];
+
 const IMPACT = [
   { value: "70% → 94%", context: "Order fulfilment, omni-channel POS–OMS platform · Emami Frank Ross" },
   { value: "+35%", context: "AOV from payment-mode integrations · Emami Frank Ross" },
@@ -113,6 +128,29 @@ export default function Home() {
         <p className="pov-note">
           Longer write-ups on what I&rsquo;m learning are on the way.
         </p>
+      </section>
+
+      {/* Skills & credentials */}
+      <section className="block">
+        <h2>Skills &amp; credentials</h2>
+        {SKILLS.map((g) => (
+          <div className="skill-group" key={g.group}>
+            <h3>{g.group}</h3>
+            <ul className="skill-chips">
+              {g.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+        <ul className="creds">
+          <li>B.Tech, Computer Science &amp; Engineering — IIT Delhi (2014)</li>
+          <li>MBA — IIM Bangalore (2018)</li>
+          <li>
+            Certifications: Machine Learning Foundations for Product Managers ·
+            Managing Machine Learning Projects — Duke University
+          </li>
+        </ul>
       </section>
 
       {/* Footer */}

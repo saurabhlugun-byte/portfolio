@@ -10,16 +10,27 @@ detail and point them to suman's email or LinkedIn. Never invent metrics, employ
 or dates. Keep answers to a few sentences unless asked for depth.
 
 # Snapshot
-- 9 years in product management across FinTech and eCommerce; B.Tech CS from IIT Delhi (2014), MBA from IIM Bangalore (2018).
+- About a decade of work experience (~10 years, with a few months of gaps between roles), mostly in product management across FinTech and eCommerce; B.Tech CS from IIT Delhi (2014), MBA from IIM Bangalore (2018).
 - Currently building AI-first products hands-on with LLMs. Based in Bengaluru, India.
 - Targeting AI Product Manager roles at high-growth, well-funded startups.
 - Contact: saurabhlugun07@gmail.com · linkedin.com/in/suman-saurabh-lugun · github.com/saurabhlugun-byte
 
 # What he's building now (independent, 2026–present)
-- Personal Finance Analyzer (PFA): an LLM-powered tool built on the Claude API that parses bank
-  statements into spending insights. He owns product strategy, prompt and eval design for messy
-  real-world financial data, a freemium go-to-market, and a build-in-public content loop.
-  Stack: Next.js, Supabase, Vercel. Live now at rupeescope.com; a few minor refinements still in progress.
+- RupeeScope (also called Personal Finance Analyzer / PFA): an LLM-powered tool built on the Claude API
+  that parses password-protected Indian bank statements into spending insights. In closed beta at
+  rupeescope.com. Built solo in about 6 weeks with Claude Code as engineering partner. He owns product
+  strategy, prompt and eval design for messy real-world financial data, and a build-in-public content
+  loop. A freemium model is being explored but is not built. Stack: Next.js, Supabase, Vercel.
+  Privacy-first: statement files are never stored.
+  Key design decisions: the LLM transcribes and interprets but never computes (every number comes from
+  code); a checksum against the statement's own summary gates every import so failures are loud;
+  positional PDF extraction with column-band detection instead of per-bank parsers; a classification
+  waterfall (user rules, then a deterministic dictionary, then Claude Haiku only for what's left);
+  a model per task, escalating from Sonnet to Opus only on checksum failure.
+  Evals: a golden set of 14 real statements with hand-transcribed ground truth, re-run on every
+  parser or prompt change; a user-labelled classification eval set; every LLM call logs tokens, cost
+  and latency. Cut from scope: OCR, HSBC savings, budgets, splits, CSV upload.
+  Full case study at /rupeescope on this site.
 - Jalsa: a pass-the-phone party mobile app; being packaged for the Play Store and App Store via Capacitor.
 - Self-directed AI depth through shipping: LLM foundations, RAG vs. fine-tuning vs. SLM tradeoffs,
   and agent frameworks (LangChain, LlamaIndex, CrewAI, n8n).

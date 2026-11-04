@@ -223,6 +223,100 @@ h3 {
 .pov { font-size: 18px; max-width: 62ch; margin: 0 0 14px; }
 .pov-note { color: var(--muted); font-size: 15px; margin: 0; }
 
+/* Card subtitle */
+.subtitle {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.item-link { margin-top: 10px !important; font-size: 16px; }
+
+/* Case study (long-form) */
+.back { font-size: 15px; margin: 0 0 40px; }
+
+.case .hero { margin-bottom: 48px; }
+.case p, .case li { max-width: 64ch; }
+.case .block p { margin: 0 0 16px; }
+.case .block h3 { margin: 30px 0 8px; }
+.case .block h3:first-of-type { margin-top: 0; }
+.case ul { padding-left: 20px; margin: 0 0 16px; }
+.case li { margin-bottom: 8px; }
+
+.tradeoff {
+  color: var(--muted);
+  border-left: 2px solid var(--hair);
+  padding-left: 14px;
+}
+
+.muted { color: var(--muted); }
+
+blockquote {
+  font-family: var(--serif);
+  font-size: 21px;
+  line-height: 1.45;
+  margin: 28px 0 0;
+  padding: 18px 20px;
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.stat {
+  background: var(--surface);
+  border: 1px solid var(--hair);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.stat-value {
+  font-family: var(--serif);
+  font-size: 30px;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+
+.stat-label { font-weight: 600; font-size: 15px; }
+.stat-note { color: var(--muted); font-size: 13px; }
+
+.figure { margin: 0 0 24px; }
+
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--hair);
+  border-radius: 12px;
+}
+
+.figure figcaption {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.flow {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.flow-box { fill: var(--paper); stroke: var(--hair); stroke-width: 1.5; }
+.flow-box.gate { fill: var(--accent-soft); stroke: var(--accent); }
+.flow-title { font-family: var(--sans); font-size: 14px; font-weight: 600; fill: var(--ink); }
+.flow-sub { font-family: var(--sans); font-size: 11.5px; fill: var(--muted); }
+.flow-line { stroke: var(--muted); stroke-width: 1.5; }
+.flow-head { fill: var(--muted); }
+
 /* Footer */
 .foot {
   display: flex;
@@ -237,6 +331,8 @@ h3 {
   .wrap { padding: 56px 20px 56px; }
   .ask-input { flex-direction: column; }
   .ask-input button { padding: 11px; }
+  .stats { grid-template-columns: 1fr; }
+  blockquote { font-size: 19px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

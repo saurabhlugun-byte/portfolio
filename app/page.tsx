@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AskWidget from "@/components/AskWidget";
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
         <p className="kicker">AI Product Manager · Bengaluru</p>
         <h1>Suman Saurabh Lugun</h1>
         <p className="lede">
-          Nine years shaping products across FinTech and eCommerce — now building
+          A decade shaping products across FinTech and eCommerce — now building
           AI-first products hands-on with LLMs. I ship the unglamorous parts:
           messy real-world data, evals, and the cost and latency tradeoffs that
           decide whether an AI feature is actually usable.
@@ -22,22 +23,28 @@ export default function Home() {
         <div className="items">
           <article className="item">
             <div className="item-head">
-              <h3>
-                <a href="https://rupeescope.com" target="_blank" rel="noreferrer">
-                  Personal Finance Analyzer
-                </a>
-              </h3>
-              <span className="tag">Live · rupeescope.com</span>
+              <div>
+                <h3>
+                  <a href="https://rupeescope.com" target="_blank" rel="noreferrer">
+                    RupeeScope
+                  </a>
+                </h3>
+                <span className="subtitle">Personal Finance Analyzer</span>
+              </div>
+              <span className="tag">In closed beta · rupeescope.com</span>
             </div>
             <p>
               An LLM-powered tool that turns raw bank statements into spending
               insights. I own the product strategy, the prompt and eval design for
-              genuinely messy financial data, a freemium go-to-market, and a
-              build-in-public loop. Next.js, Supabase, Vercel. Live now at{' '}
+              genuinely messy financial data, and a build-in-public loop. Built
+              solo in six weeks on Next.js, Supabase and Vercel. In closed beta at{' '}
               <a href="https://rupeescope.com" target="_blank" rel="noreferrer">
                 rupeescope.com
               </a>
               .
+            </p>
+            <p className="item-link">
+              <Link href="/rupeescope">Read the case study →</Link>
             </p>
           </article>
           <article className="item">

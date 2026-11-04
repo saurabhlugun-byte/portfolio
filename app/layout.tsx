@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Suman Saurabh Lugun — AI Product Manager",
+  title: "Suman Saurabh Lugun — Product Leader, building AI-first products",
   description:
-    "AI Product Manager with a decade across FinTech and eCommerce, now building AI-first products hands-on with LLMs.",
+    "Product leader with a decade across FinTech and eCommerce, now building AI-first products hands-on with LLMs.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -6,7 +6,7 @@ export default function Home() {
     <main className="wrap">
       {/* Hero */}
       <header className="hero">
-        <p className="kicker">AI Product Manager · Bengaluru</p>
+        <p className="kicker">Product Leader · Bengaluru</p>
         <h1>Suman Saurabh Lugun</h1>
         <p className="lede">
           A decade shaping products across FinTech and eCommerce — now building
@@ -36,7 +36,7 @@ export default function Home() {
             <p>
               An LLM-powered tool that turns raw bank statements into spending
               insights. I own the product strategy, the prompt and eval design for
-              genuinely messy financial data, and a build-in-public loop. Built
+              genuinely messy financial data. Built
               solo in six weeks on Next.js, Supabase and Vercel. In closed beta at{' '}
               <a href="https://rupeescope.com" target="_blank" rel="noreferrer">
                 rupeescope.com
@@ -81,9 +81,9 @@ export default function Home() {
               <span className="tag">FinTech automation</span>
             </div>
             <p>
-              Owned an ML pipeline for cheque and data capture with RPA to
-              automate reconciliation and credit identification across bank
-              accounts — improving accuracy and turnaround while cutting errors.
+              Implemented ML-powered cheque data entry and RPA for banking
+              processes, automating reconciliation and credit identification
+              across multiple bank accounts.
             </p>
           </article>
           <article className="item">
@@ -93,8 +93,8 @@ export default function Home() {
             </div>
             <p>
               Built a dark-store fulfilment model and a POS-to-OMS platform that
-              lifted order fulfilment from 70% to 94%, plus a personalized
-              recommendation engine that raised AOV 35%.
+              lifted order fulfilment from 70% to 94%, plus payment-mode
+              integrations that raised AOV 35%.
             </p>
           </article>
         </div>
@@ -113,7 +113,7 @@ export default function Home() {
           the health-data-meets-AI intersection is badly underbuilt.
         </p>
         <p className="pov-note">
-          A longer set of write-ups is on the way — I write in public as I build.
+          Longer write-ups on what I&rsquo;m learning are on the way.
         </p>
       </section>
 

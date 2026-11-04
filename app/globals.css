@@ -56,8 +56,20 @@ h1 {
   font-size: 19px;
   color: var(--ink);
   max-width: 60ch;
-  margin: 0 0 34px;
+  margin: 0 0 18px;
 }
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin: 0 0 30px;
+}
+
+.open-to { color: var(--muted); font-size: 15px; margin: 0; }
+
+.resume-link { display: inline-block; text-decoration: none !important; }
 
 /* Ask widget */
 .ask {

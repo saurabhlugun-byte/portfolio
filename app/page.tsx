@@ -14,6 +14,12 @@ export default function Home() {
           messy real-world data, evals, and the cost and latency tradeoffs that
           decide whether an AI feature is actually usable.
         </p>
+        <div className="hero-meta">
+          <p className="open-to">Open to product roles building AI-first products · Bengaluru</p>
+          <a className="chip resume-link" href="/resume.pdf" target="_blank" rel="noreferrer">
+            Download résumé
+          </a>
+        </div>
         <AskWidget />
       </header>
 

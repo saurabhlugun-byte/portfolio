@@ -67,8 +67,6 @@ h1 {
   margin: 0 0 30px;
 }
 
-.open-to { color: var(--muted); font-size: 15px; margin: 0; }
-
 .resume-link { display: inline-block; text-decoration: none !important; }
 
 /* Ask widget */
@@ -253,8 +251,6 @@ h3 {
 .impact-context { color: var(--muted); font-size: 14px; line-height: 1.45; }
 
 /* Experience timeline */
-.lens { display: flex; gap: 8px; margin: -8px 0 26px; flex-wrap: wrap; }
-.chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
 .timeline { list-style: none; margin: 0; padding: 0; }
 
@@ -292,7 +288,17 @@ h3 {
 
 .tl-entry ul { margin: 0; padding-left: 18px; max-width: 62ch; }
 .tl-entry ul li { margin-bottom: 6px; font-size: 16px; }
-.tl-entry strong { font-weight: 600; }
+.tl-more {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 2px 0;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.tl-more:hover { text-decoration: underline; }
 
 /* Skills & credentials */
 .skill-group { margin-bottom: 18px; }

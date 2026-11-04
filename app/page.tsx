@@ -62,15 +62,17 @@ export default function Home() {
               <span className="tag">In closed beta · rupeescope.com</span>
             </div>
             <p>
-              An LLM-powered tool that turns raw bank statements into spending
-              insights. I own the product strategy, the prompt and eval design for
-              genuinely messy financial data. Built
-              solo in six weeks on Next.js, Supabase and Vercel. In closed beta at{' '}
-              <a href="https://rupeescope.com" target="_blank" rel="noreferrer">
-                rupeescope.com
-              </a>
-              .
+              Turns password-protected Indian bank and card statements into an
+              accurate spending view across accounts. The LLM reads messy
+              statements; deterministic checks make sure every number balances. I
+              owned scope, evals, model and cost tradeoffs, and privacy design, and
+              built it solo in six weeks with Claude Code.
             </p>
+            <ul className="decisions">
+              <li>The model reads; code calculates.</li>
+              <li>A statement that doesn&rsquo;t balance never gets imported.</li>
+              <li>Rules first, LLM only for what rules miss.</li>
+            </ul>
             <p className="item-link">
               <Link href="/rupeescope">Read the case study →</Link>
             </p>
@@ -78,11 +80,12 @@ export default function Home() {
           <article className="item">
             <div className="item-head">
               <h3>Jalsa</h3>
-              <span className="tag">Shipping to app stores</span>
+              <span className="tag">Pre-launch · Google Play</span>
             </div>
             <p>
-              A pass-the-phone party app for an India-aware audience, being
-              packaged for the Play Store and App Store via Capacitor.
+              A pass-the-phone party app for an India-aware audience. Approved on
+              Google Play; the 12-tester closed test required before public
+              release is still pending.
             </p>
           </article>
         </div>

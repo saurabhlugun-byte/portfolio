@@ -235,6 +235,23 @@ h3 {
 .pov { font-size: 18px; max-width: 62ch; margin: 0 0 14px; }
 .pov-note { color: var(--muted); font-size: 15px; margin: 0; }
 
+/* Impact at a glance */
+.impact {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px 20px;
+}
+
+.impact-value {
+  font-family: var(--serif);
+  font-size: 30px;
+  line-height: 1.1;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.impact-context { color: var(--muted); font-size: 14px; line-height: 1.45; }
+
 /* Card subtitle */
 .subtitle {
   display: block;
@@ -344,6 +361,8 @@ blockquote {
   .ask-input { flex-direction: column; }
   .ask-input button { padding: 11px; }
   .stats { grid-template-columns: 1fr; }
+  .impact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .impact-value { font-size: 26px; }
   blockquote { font-size: 19px; }
 }
 

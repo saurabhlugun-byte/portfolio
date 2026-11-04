@@ -1,6 +1,15 @@
 import Link from "next/link";
 import AskWidget from "@/components/AskWidget";
 
+const IMPACT = [
+  { value: "70% → 94%", context: "Order fulfilment, omni-channel POS–OMS platform · Emami Frank Ross" },
+  { value: "+35%", context: "AOV from payment-mode integrations · Emami Frank Ross" },
+  { value: "200M+", context: "Folios covered by a B2B Loan-Against-Securities API · KFin" },
+  { value: "26", context: "Mutual-fund AMCs unified in one investor app · KFin" },
+  { value: "1M+", context: "Daily transactions with identity & account validation · KFin" },
+  { value: "50%", context: "Faster Smart TV page rendering · Samsung R&D" },
+];
+
 export default function Home() {
   return (
     <main className="wrap">
@@ -22,6 +31,19 @@ export default function Home() {
         </div>
         <AskWidget />
       </header>
+
+      {/* Impact at a glance */}
+      <section className="block">
+        <h2>Impact at a glance</h2>
+        <div className="impact">
+          {IMPACT.map((i) => (
+            <div className="impact-item" key={i.value}>
+              <div className="impact-value">{i.value}</div>
+              <div className="impact-context">{i.context}</div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Building now */}
       <section className="block">

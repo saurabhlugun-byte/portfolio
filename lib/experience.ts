@@ -23,6 +23,8 @@ export const EXPERIENCE: Entry[] = [
       "Built RupeeScope solo in 6 weeks, from scope to closed beta, with Claude Code as engineering partner; also building Jalsa, a party app approved on Google Play and awaiting its 12-tester closed test before public release.",
       "Designed an eval harness before the parser: 14 real statements with hand-transcribed ground truth, regression runs on every parser or prompt change, a 2-statement held-out set never used for tuning, and cost, latency and escalation rate logged per run.",
       "Shipped privacy-first: statements processed in memory only, one-click deletion, row-level security on every table, separate dev/prod environments and a pre-launch security audit.",
+      "Routed models per task (Haiku for classification, Sonnet for structuring and text-to-SQL, Opus only on checksum failure) through one metered gateway with per-user cost caps.",
+      "Built a rules-first classification waterfall (user rules → merchant dictionary → LLM only for residual rows) over a 15-category taxonomy, with cross-account transfer matching to remove double-counted spend.",
     ],
   },
   {
@@ -46,7 +48,10 @@ export const EXPERIENCE: Entry[] = [
       "Launched a dark store with 25K+ SKUs on top of 100+ existing stores, integrating WMS and 3PLs for delivery across 1100+ pincodes; led end-to-end mobile app development.",
       "Built an omni-channel POS–OMS platform for real-time inventory, lifting fulfilment from 70% to 94% with 91% on-time deliveries.",
       "Payment-mode integrations cut cancellations 27% and raised AOV 35%; a recommendation system lifted add-to-cart events 4%.",
-      "Ran sprint planning and backlog grooming, improved API performance 50% with APM tooling, and set up CleverTap/GA analytics and real-time KPI dashboards.",
+      "Ran sprint planning and backlog grooming, and improved API performance 50% with APM tooling.",
+      "Set up behavioural analytics (CleverTap, Google Analytics) and real-time KPI dashboards.",
+      "Partnered with the digital marketing team on SEO, a promotion engine and cohort-based performance marketing to improve acquisition, engagement and retention.",
+      "Collaborated with designers on a website revamp to improve repeat-user experience and discoverability.",
     ],
   },
   {
@@ -59,6 +64,7 @@ export const EXPERIENCE: Entry[] = [
       "Unified onboarding and portfolio view across 26 mutual-fund AMCs in one investor app; integrated identity and account validation for 1M+ daily transactions.",
       "Implemented ML-powered cheque data entry and RPA to automate reconciliation and credit identification.",
       "Partnered with the COO and business heads on operational-efficiency initiatives.",
+      "Enhanced in-app communication to improve investor engagement across touchpoints.",
     ],
   },
   {

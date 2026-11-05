@@ -10,6 +10,30 @@ const SUGGESTIONS = [
   "Walk me through his fintech experience.",
 ];
 
+// Replies use light Markdown. Render **bold** and "- " bullets, strip
+// heading markers; everything else stays plain text (no HTML injection).
+function renderInline(text: string) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+    part.startsWith("**") && part.endsWith("**") && part.length > 4 ? (
+      <strong key={i}>{part.slice(2, -2)}</strong>
+    ) : (
+      part
+    )
+  );
+}
+
+function renderReply(text: string) {
+  return text.split("\n").map((line, i, lines) => {
+    const clean = line.replace(/^#{1,6}\s+/, "").replace(/^\s*[-*]\s+/, "• ");
+    return (
+      <span key={i}>
+        {renderInline(clean)}
+        {i < lines.length - 1 && "\n"}
+      </span>
+    );
+  });
+}
+
 export default function AskWidget() {
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
@@ -58,7 +82,7 @@ export default function AskWidget() {
         <div className="ask-thread" ref={scrollRef}>
           {messages.map((m, i) => (
             <div key={i} className={`bubble ${m.role}`}>
-              {m.content}
+              {m.role === "assistant" ? renderReply(m.content) : m.content}
             </div>
           ))}
           {loading && <div className="bubble assistant thinking">Thinking…</div>}

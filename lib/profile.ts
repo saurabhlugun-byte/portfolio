@@ -27,17 +27,41 @@ to his email (saurabhlugun07@gmail.com). Never invent or estimate them.
 - Contact: saurabhlugun07@gmail.com · linkedin.com/in/suman-saurabh-lugun · github.com/saurabhlugun-byte
 - His résumé is downloadable from this site at /resume.pdf.
 
-# Skills
-- AI / LLM product (hands-on from shipping RupeeScope): LLM application design, prompt engineering,
-  LLM evals (golden datasets, ground-truth labelling, regression testing against real statements),
-  structured outputs and schema validation, model selection and cost/latency tradeoffs, text-to-SQL,
-  hybrid AI + deterministic-rules design, document extraction.
-- Product: 0-to-1 products, product strategy and roadmaps, discovery and requirements, user stories,
-  agile/scrum, backlog management, GTM, UX collaboration, product analytics.
+# Skills (full record; the résumé shows a condensed subset)
+- AI / ML
+  - LLM application design, prompt engineering, LLM evals (golden datasets, ground-truth labelling,
+    regression testing, held-out set), structured outputs and schema validation, per-task model
+    routing and cost/latency tradeoffs, text-to-SQL with guardrails, hybrid AI + deterministic-rules
+    design, PDF/document extraction — RupeeScope.
+  - Recommendation system that lifted add-to-cart events 4% — Emami Frank Ross.
+  - ML-powered cheque data entry and RPA for reconciliation and credit identification — KFin (2018–21).
+  - Directed early development of an AI/LLM compliance tool; evaluated AI contact-centre platforms
+    (call transcription, agent-assist, issue routing) — KFin DVP.
+  - Certifications: Machine Learning Foundations for Product Managers; Managing Machine Learning
+    Projects — Duke University.
+- Product
+  - 0-to-1 products; product strategy and roadmaps; discovery and requirements gathering; user stories;
+    wireframing; agile/scrum, sprint planning and backlog grooming.
+  - GTM for a B2B API product (Loan-Against-Securities, 200M+ folios) — KFin.
+  - Funnel improvement (payment modes: −27% cancellations, +35% AOV), cohort-based targeting, SEO,
+    promotion engine and performance marketing with the marketing team — Emami.
+  - Product analytics and KPI dashboards (CleverTap, Google Analytics, real-time dashboards) — Emami.
+  - UX collaboration: website revamp for repeat users and discoverability (Emami); investor-portal
+    onboarding and portfolio view across 26 AMCs (KFin).
+  - Build-vs-buy and vendor evaluation (Salesforce, UNFYD, incl. data residency) — KFin DVP.
+- Commerce and fintech systems: POS–OMS integration, WMS and 3PL integration, payment-gateway
+  integration, identity and account validation at 1M+ daily transactions.
+- Leadership: led a team of 2 senior managers (KFin DVP); recruited and mentored teams across product,
+  analytics, marketing and operations; worked with COO and business heads (KFin) and with teams in
+  Korea and Poland (Samsung).
 - Tools & tech: Claude API, Claude Code, Next.js, Supabase (PostgreSQL), Vercel, SQL, Python, JIRA,
-  Confluence, CleverTap, Google Analytics, Figma AI, Postman, AWS, Algolia, Razorpay.
+  Confluence, Trello, CleverTap, Google Analytics, NewRelic (APM), Algolia, Razorpay, Vinculum,
+  Shipsy, Postman, AWS, Figma AI. Earlier engineering: C, C++, Java, JavaScript (Samsung).
 - Domain: mutual funds and RTA, Loan-Against-Securities, payments, personal finance, pharmacy
   eCommerce, omni-channel retail.
+- Never claim RAG, fine-tuning, SLMs, agent frameworks (LangChain, LlamaIndex, CrewAI, n8n), "ML
+  lifecycle", personalization as a separate skill, or A/B experimentation; none of these appears in
+  his work history. If asked, say so plainly.
 
 # Independent AI Product Builder · Bengaluru (Jun 2026 – Present)
 ## RupeeScope (also called Personal Finance Analyzer / PFA)
@@ -94,8 +118,10 @@ to his email (saurabhlugun07@gmail.com). Never invent or estimate them.
 - Launched a recommendation system that lifted add-to-cart events 4%.
 - Led end-to-end mobile app development across design and engineering; set up behavioural analytics
   (CleverTap, Google Analytics) and real-time KPI dashboards.
-- Ran sprint planning and backlog grooming; used APM tools to improve API performance 50%. Partnered
-  with marketing on SEO, a promotion engine and cohort-based targeting for acquisition and retention.
+- Ran sprint planning and backlog grooming; used APM tools to improve API performance 50%.
+- Partnered with the digital marketing team on SEO, a promotion engine and cohort-based performance
+  marketing to improve acquisition, engagement and retention.
+- Collaborated with designers on a website revamp to improve repeat-user experience and discoverability.
 
 # KFin Technologies — Manager, Digital Transformation & Investor Products · Hyderabad (Apr 2018 – Feb 2021)
 - Led development and GTM of a B2B Loan-Against-Securities API for banks and fintech platforms across
@@ -106,6 +132,7 @@ to his email (saurabhlugun07@gmail.com). Never invent or estimate them.
   and credit identification across multiple bank accounts.
 - Integrated identity and account validation for 1M+ daily transactions; partnered with the COO and
   business heads on operational-efficiency initiatives.
+- Enhanced in-app communication to improve investor engagement across touchpoints.
 
 # Samsung R&D Institute — Software Engineer · Noida (Jul 2014 – May 2016)
 - Developed browser and page-preloading features for Smart TV, cutting rendering time 50%;

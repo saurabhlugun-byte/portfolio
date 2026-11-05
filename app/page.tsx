@@ -1,21 +1,7 @@
 import Link from "next/link";
 import AskWidget from "@/components/AskWidget";
 import Experience from "@/components/Experience";
-
-const SKILLS = [
-  {
-    group: "AI / LLM",
-    items: ["LLM application design", "Prompt engineering", "LLM evals", "Structured outputs", "Model selection & cost tradeoffs", "Text-to-SQL", "Claude API", "Claude Code"],
-  },
-  {
-    group: "Product",
-    items: ["0-to-1 products", "Roadmaps", "Discovery & requirements", "Agile / Scrum", "GTM"],
-  },
-  {
-    group: "Stack",
-    items: ["SQL", "Python", "Next.js", "Supabase / PostgreSQL", "Vercel"],
-  },
-];
+import { SKILLS } from "@/lib/skills";
 
 const IMPACT = [
   { value: "70% → 94%", context: "Order fulfilment, omni-channel POS–OMS platform · Emami Frank Ross" },
@@ -137,7 +123,9 @@ export default function Home() {
             <h3>{g.group}</h3>
             <ul className="skill-chips">
               {g.items.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item.name} title={item.where}>
+                  {item.name}
+                </li>
               ))}
             </ul>
           </div>

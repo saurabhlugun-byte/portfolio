@@ -73,8 +73,8 @@
   <ul>
     <li>Built solo in 6 weeks, from scope to closed beta, an LLM app that turns password-protected Indian bank and card PDFs into cross-account spending insights (Next.js, Supabase, Vercel, Claude API, Claude Code).</li>
     <li>Designed a hybrid architecture where the LLM reads and interprets but never computes: a deterministic checksum gate rejects any statement that doesn’t balance, and a rules-first classification waterfall sends only residual rows to the LLM.</li>
-    <li>Built the eval harness before the parser: 14 real statements with hand-transcribed ground truth, a 2-statement held-out set, and regression runs on every change tracking cost, latency and escalation rate.</li>
-    <li>Routed models per task (Haiku for classification, Sonnet for structuring, Opus only on checksum failure) through one metered gateway with per-user cost caps; shipped privacy-first with in-memory statement processing, one-click deletion, row-level security and a pre-launch security audit.</li>
+    <li>Built the eval harness before the parser: 14 real statements with hand-transcribed ground truth plus a 2-statement held-out set; checksum pass rate 100% (16/16, 7 banks, up from 67% on the first run) and type accuracy 100% on 98 labelled rows.</li>
+    <li>Routed models per task (Haiku for classification, Sonnet for structuring, Opus only on checksum failure; 0% escalation on final runs) at ₹2.68 per statement, down ~52%; shipped privacy-first with in-memory statement processing, one-click deletion, row-level security and a pre-launch security audit.</li>
   </ul>
   <p class="sub">Jalsa — pass-the-phone party app; approved on Google Play, with the 12-tester closed test required for public release still pending.</p>
 </div>

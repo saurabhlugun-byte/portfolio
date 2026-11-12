@@ -74,6 +74,10 @@ export default function Home() {
               <li>A statement that doesn&rsquo;t balance never gets imported.</li>
               <li>Rules first, LLM only for what rules miss.</li>
             </ul>
+            <p className="card-metrics">
+              100% checksum pass rate on 16 statements from 7 banks · ₹2.68 per
+              statement · 0% escalation on final runs
+            </p>
             <p className="item-link">
               <Link href="/rupeescope">Read the case study →</Link>
             </p>

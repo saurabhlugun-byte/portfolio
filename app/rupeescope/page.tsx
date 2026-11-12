@@ -16,10 +16,12 @@ export const metadata: Metadata = {
 const DEV_WEEKS = "six";
 
 const NUMBERS: { label: string; value: string | null; note?: string }[] = [
-  { label: "Checksum pass rate", value: null, note: "golden set, first attempt" },
-  { label: "Classification accuracy", value: null, note: "type / category, labelled set" },
-  { label: "Cost per statement", value: null, note: "average, all LLM calls" },
-  { label: "Escalation rate", value: null, note: "share of imports escalated to Opus" },
+  { label: "Checksum pass rate", value: "100%", note: "16/16 statements (14 golden + 2 held-out), 7 banks, 11 card and 5 savings; first run passed 8/12 (67%)" },
+  { label: "Cost per statement", value: "₹2.68", note: "~$0.028 average for structuring at ₹95/$; p95 ₹4.57; down ~52% from ₹5.55 in early runs" },
+  { label: "Escalation rate", value: "0%", note: "on the final runs, down from 33% (4/12) on the first; 2 of 128 across all full runs" },
+  { label: "Type accuracy", value: "100%", note: "98/98 labelled rows, on every one of 3 runs" },
+  { label: "Category accuracy", value: "~68%", note: "45–47 of 68 spending rows; ~87% (46/53) when a category was assigned" },
+  { label: "Rows resolved without an LLM", value: "58%", note: "57 of 98, by deterministic rules (a lower bound)" },
 ];
 
 // Set to true only if the held-out set was actually run (shows the paragraph).
@@ -273,6 +275,14 @@ export default function RupeeScopeCaseStudy() {
               </div>
             ))}
           </div>
+          <p className="numbers-note">
+            Category accuracy on its own undersells the design. Most misses are rows
+            left Uncategorized (about 15), not wrong guesses (about 7), and no UPI
+            person-to-person transfer was forced into a spending category. Row-level
+            spot checks matched 71/71 transactions, and the text-to-SQL Q&amp;A eval
+            scored 17/18 (94%) at about ₹0.27 per question. Checksum figures are
+            from the last full golden run, 28 Oct 2026.
+          </p>
         </section>
       )}
 
